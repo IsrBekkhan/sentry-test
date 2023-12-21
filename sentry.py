@@ -28,6 +28,7 @@ sentry_sdk.init(
 @app.route('/hello', methods=['GET'])
 def hello_world() -> Tuple[Response, int]:
     for_raise = 1 / 0  # raises an error
+    print('test')
     return jsonify({'message': 'Hello World!'}), 200
 
 
